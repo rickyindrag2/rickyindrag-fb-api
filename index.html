@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="assets/img/logo.png" />
+    <title>Facebook API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v12.0&appId=255603216341593&autoLogAppEvents=1"
+      nonce="1gtIanfy"
+    ></script>
+    <script src="assets/js/facebook-api.js"></script>
+
+    <header>
+      <nav>
+        <div class="topnav" id="myTopnav">
+          <a href="#" class="active">Home</a>
+          <a href="#segmen_products">Products</a>
+          <a href="#about">About</a>
+          <a
+            href="javascript:void(0);"
+            style="font-size: 15px"
+            class="icon"
+            onclick="myFunction()"
+            >&#9776;</a
+          >
+          <div class="topnav-right">
+            <div id="default-index">
+              <div
+                id="login"
+                class="fb-login-button"
+                data-width=""
+                data-size="large"
+                data-button-type="login_with"
+                data-layout="default"
+                data-auto-logout-link="false"
+                data-use-continue-as="false"
+                onlogin="checkLoginState()"
+                style="margin-top: 5px; margin-right: 5px"
+              >
+                Log in to Facebook
+              </div>
+            </div>
+
+            <a id="logout" href="#" onclick="logout()">Logout</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="jumbotron">
+        <h1>
+          <span style="background-color: rgba(0, 0, 0, 0.7); padding: 0px 15px"
+            >Facebook API</span
+          >
+        </h1>
+      </div>
+    </header>
+
+    <div id="login-index">
+      <div class="heading" id="segment_article">
+        <h1>Your Facebook Status</h1>
+      </div>
+
+      <main>
+        <div id="content">
+          <div class="post-title">
+            <h2>Latest Posts</h2>
+
+            <button class="refresh-btn" onclick="refresh()">Refresh</button>
+          </div>
+
+          <div id="post" class="post-container"></div>
+        </div>
+
+        <aside>
+          <div id="profile"></div>
+        </aside>
+      </main>
+    </div>
+
+    <div class="heading" id="segmen_highlights">
+      <h1>Highlights</h1>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="assets/img/img1.jpg" style="width: 100%" />
+        <div class="text" style="background-color: rgba(0, 0, 0, 0.7)">
+          Facebook (1)
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="assets/img/img2.jpg" style="width: 100%" />
+        <div class="text" style="background-color: rgba(0, 0, 0, 0.7)">
+          Facebook (2)
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="assets/img/img3.jpg" style="width: 100%" />
+        <div class="text" style="background-color: rgba(0, 0, 0, 0.7)">
+          Facebook (3)
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="heading" id="segmen_products">
+      <h1>Used Products</h1>
+    </div>
+    <div id="products"></div>
+    <footer id="about">
+      <div
+        class="fb-share-button"
+        data-href="https://rickyindrag-fb-api.web.app"
+        data-layout="button_count"
+        data-size="large"
+      >
+        <a
+          target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frickyindrag-fb-api.web.app%2F&amp;src=sdkpreparse"
+          class="fb-xfbml-parse-ignore"
+          >Bagikan</a
+        >
+      </div>
+      <br /><br />
+      Aplikasi Facebook API &copy; 2021 RickyIG
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/show_products.js"></script>
+  </body>
+</html>
