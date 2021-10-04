@@ -18,18 +18,22 @@ v1.0.0
 ## Installation
 >- Add your app here : https://developers.facebook.com/apps/
 >- Replace appId in `facebook-api.js` with your app id
-```window.fbAsyncInit = function () {
-      FB.init({
-        appId: "YOUR_APP_ID",
-        cookie: true,
-        xfbml: true,
-        version: "v12.0",
-      });
 
-        FB.AppEvents.logPageView();
-        checkLoginState();
-        setElements(false);
-      }; ```
+```php
+window.fbAsyncInit = function () {
+  FB.init({
+    appId: "190024813251894",
+    cookie: true,
+    xfbml: true,
+    version: "v12.0",
+  });
+
+  FB.AppEvents.logPageView();
+  checkLoginState();
+  setElements(false);
+};
+```
+
 >- Set up your app configuration properly (Basic Settings)
 >- Add product -> Facebook Login -> Make sure to check the Login with the Javascript SDK 
 >- Insert Allowed Domains for the JavaScript SDK with your web hosting domain
