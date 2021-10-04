@@ -22,7 +22,7 @@ v1.0.0
 ```php
 window.fbAsyncInit = function () {
   FB.init({
-    appId: "190024813251894",
+    appId: "YOUR_APP_ID",
     cookie: true,
     xfbml: true,
     version: "v12.0",
