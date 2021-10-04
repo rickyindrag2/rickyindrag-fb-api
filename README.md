@@ -10,15 +10,15 @@ Website yang menggunakan Facebook API v12.0 diintegrasikan dengan Facebook SDK f
 
 ## Version
 v1.0.0
-> Facebook Login
-> Social Plugin (Share post with link)
-> Graph API v12.0 incl. public_profile, email, user_birthday, user_posts
-> Slider using Javascript
+- Facebook Login
+- Social Plugin (Share post with link)
+- Graph API v12.0 incl. public_profile, email, user_birthday, user_posts
+- Slider using Javascript
 
 ## Installation
 >- Add your app here : https://developers.facebook.com/apps/
 >- Replace appId in `facebook-api.js` with your app id
-> ```window.fbAsyncInit = function () {
+```window.fbAsyncInit = function () {
       FB.init({
         appId: "YOUR_APP_ID",
         cookie: true,
