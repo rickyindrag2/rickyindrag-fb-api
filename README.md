@@ -34,6 +34,7 @@ window.fbAsyncInit = function () {
 };
 ```
 
+>- Web hosting
 >- Set up your app configuration properly (Basic Settings)
 >- Add product -> Facebook Login -> Make sure to check the Login with the Javascript SDK 
 >- Insert Allowed Domains for the JavaScript SDK with your web hosting domain
